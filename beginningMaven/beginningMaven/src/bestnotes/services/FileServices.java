@@ -1,7 +1,6 @@
 package services;
 
 import dto.FileRequest;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 public interface FileServices {
     String registerFile(FileRequest fileRequest);

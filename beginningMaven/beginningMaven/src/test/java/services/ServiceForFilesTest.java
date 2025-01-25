@@ -4,12 +4,17 @@ import dto.FileRequest;
 import exceptions.FileExceptions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+import org.springframework.stereotype.Service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+@DataMongoTest
 public class ServiceForFilesTest {
-    private FileServices fileService;
+    @Autowired
+    private static FileServices fileService;
 
     @BeforeEach
     public void seTup() {
